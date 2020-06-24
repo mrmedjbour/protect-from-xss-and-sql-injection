@@ -9,7 +9,7 @@ function cleaninput($input)
         );
         
         $output = preg_replace($search, '', $input);
-        return $output;
+        return strip_tags($output);
     }
 	
 function sanitize($input)
@@ -127,7 +127,7 @@ function sanitize($input)
     );
     foreach ($patterns as $pattern) {
         if (strlen($query_string) > 255 OR strpos(strtolower($query_string), strtolower($pattern)) !== false) {
-		include ("blocked.php");
+		header("Location: https://www.cruisedeckplans.com/404.php");
 		exit(1);
 		}
 	}
