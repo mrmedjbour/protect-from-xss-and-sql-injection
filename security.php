@@ -82,7 +82,6 @@ function sanitize($input)
         "ascii",
         "sleep(",
         "&&",
-        "and",
         "insert",
         "between",
         "values",
