@@ -126,7 +126,7 @@ function sanitize($input)
     );
     foreach ($patterns as $pattern) {
         if (strlen($query_string) > 255 OR strpos(strtolower($query_string), strtolower($pattern)) !== false) {
-		header("Location: https://www.cruisedeckplans.com/404.php");
+		header("Location: http://emeals.com/404");
 		exit(1);
 		}
 	}
